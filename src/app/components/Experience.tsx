@@ -1,27 +1,27 @@
 import React from 'react';
-import { Calendar, MapPin, ChevronRight } from 'lucide-react';
+import { Calendar, ChevronRight, MapPin } from 'lucide-react';
 import '../styles/Experience.css';
 
 const Experience: React.FC = () => {
   const experience = {
     company: 'GTPL',
-    role: 'Software Developer & Wellness Project Team Leader',
-    duration: 'Sep 2023 – Present',
-    location: 'India',
-    type: 'Full-Time (Promoted from Intern)',
+    role: 'Software Engineer',
+    duration: 'Apr 2023 - Present',
+    location: 'Bengaluru, India',
+    type: 'Full-Time',
     responsibilities: [
-      'Lead a wellness project team, coordinating cross-functional efforts to deliver innovative wellness solutions',
-      'Deployed 2 live web applications using Docker on Google Cloud Platform',
-      'Built and released 2 mobile applications on Google Play Store',
-      'Designed and implemented scalable backend architectures with Django REST Framework',
-      'Developed responsive frontend interfaces with modern React patterns',
-      'Integrated AI workflows to enhance user experiences in wellness applications'
+      'Develop and enhance scalable enterprise-grade web and mobile applications using Python, Django, React Native, Next.js, and RESTful APIs.',
+      'Engineer secure backend systems with JWT-based authentication, RBAC, and API authorization mechanisms.',
+      'Design high-performance APIs for payment processing, transaction management, notification services, and real-time product features.',
+      'Participate across the full SDLC including requirement analysis, architecture, development, testing, deployment, debugging, and production support.',
+      'Collaborate with developers, QA teams, and business stakeholders in Agile/Scrum environments to deliver production-ready solutions.',
+      'Optimize PostgreSQL and CockroachDB schemas to support reliable, high-volume transactional workloads.'
     ],
     achievements: [
-      'Promoted from intern to full-time developer within 6 months',
-      'Successfully led wellness project team to deliver a live wellness platform, improving employee engagement',
-      'Deployed 2 web applications on GCP using Docker, ensuring high availability',
-      'Published 2 mobile apps on Google Play Store, achieving 5,000+ downloads'
+      'Built secure enterprise and FinTech systems with strong emphasis on scalability, stability, and performance.',
+      'Integrated payment gateways, authentication providers, and notification services into production applications.',
+      'Improved operational efficiency through automated notification workflows and real-time updates using Django and Firebase.',
+      'Contributed to deployment, CI/CD, application monitoring, debugging, and architecture discussions in live environments.'
     ]
   };
 
@@ -31,7 +31,7 @@ const Experience: React.FC = () => {
         <div className="section-header">
           <h2 className="section-title">Work Experience</h2>
           <p className="section-subtitle">
-            Professional journey and career milestones
+            Professional journey and engineering contributions
           </p>
         </div>
 
@@ -73,7 +73,7 @@ const Experience: React.FC = () => {
                 <div className="achievement-list">
                   {experience.achievements.map((achievement, index) => (
                     <div key={index} className="achievement-item">
-                      <div className="achievement-icon">✨</div>
+                      <div className="achievement-icon">*</div>
                       <span>{achievement}</span>
                     </div>
                   ))}
@@ -86,17 +86,17 @@ const Experience: React.FC = () => {
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-content">
-                <h4>Full-Time Developer & Wellness Project Team Leader</h4>
-                <p>Promoted and led wellness project deployment</p>
-                <span className="timeline-date">Mar 2024 – Present</span>
+                <h4>Software Engineer</h4>
+                <p>Building enterprise, FinTech, and real-time application workflows at GTPL</p>
+                <span className="timeline-date">Apr 2023 - Present</span>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-content">
-                <h4>Software Developer Intern</h4>
-                <p>Started internship at GTPL</p>
-                <span className="timeline-date">Sep 2023 – Feb 2024</span>
+                <h4>Engineering Foundation</h4>
+                <p>Completed ECE degree and transitioned into full-stack product engineering</p>
+                <span className="timeline-date">2022 - 2023</span>
               </div>
             </div>
           </div>

@@ -1,41 +1,46 @@
 import React from 'react';
-import { GraduationCap, Calendar, MapPin, Award } from 'lucide-react';
+import { Award, Calendar, GraduationCap, MapPin } from 'lucide-react';
 import '../styles/Education.css';
 
 const Education: React.FC = () => {
   const education = [
     {
-      degree: 'B.Tech in Electrical and Electronics Engineering',
-      institution: 'Aditya Engineering College',
+      degree: 'BE in Electronics and Communication Engineering',
+      institution: 'Basaveshwar Engineering College, Bagalkot',
       year: '2022',
-      grade: 'CGPA 7.2',
-      location: 'Andhra Pradesh, India',
-      type: 'Bachelor\'s Degree'
+      grade: 'CGPA 6.58',
+      location: 'Karnataka, India',
+      type: "Bachelor's Degree"
     },
     {
-      degree: 'Intermediate (MPC)',
-      institution: 'Sri Chaitanya Junior College',
+      degree: 'PUC (PCMB)',
+      institution: 'Vasavi Comp PU College, Bellary',
       year: '2018',
-      grade: '75%',
-      location: 'Andhra Pradesh, India',
+      grade: '63%',
+      location: 'Karnataka, India',
       type: 'Higher Secondary'
     },
     {
-      degree: 'Secondary School Certificate',
-      institution: 'ZPP High School',
+      degree: 'SSLC',
+      institution: 'Vidhya Eng Med High School, Sindhanur',
       year: '2016',
-      grade: 'GPA 8.7',
-      location: 'Andhra Pradesh, India',
+      grade: '80.48%',
+      location: 'Karnataka, India',
       type: 'Secondary Education'
     }
   ];
 
-  const languages = ['Telugu', 'English'];
+  const strengths = [
+    'Enterprise application development',
+    'FinTech payment workflows',
+    'Notification systems',
+    'Production debugging'
+  ];
 
   const personalInfo = {
-    dob: '04/05/2000',
-    address: 'Navara, East Godavari, Andhra Pradesh',
-    relocation: 'Yes'
+    location: 'Bengaluru, Karnataka',
+    currentRole: 'Software Engineer at GTPL',
+    certification: 'Registered Product Owner'
   };
 
   return (
@@ -44,7 +49,7 @@ const Education: React.FC = () => {
         <div className="section-header">
           <h2 className="section-title">Education & Background</h2>
           <p className="section-subtitle">
-            Academic foundation and personal information
+            Academic foundation and professional snapshot
           </p>
         </div>
 
@@ -83,11 +88,11 @@ const Education: React.FC = () => {
 
           <div className="additional-info">
             <div className="info-card">
-              <h3 className="card-title">Languages</h3>
+              <h3 className="card-title">Core Strengths</h3>
               <div className="languages-list">
-                {languages.map((language, index) => (
+                {strengths.map((strength, index) => (
                   <div key={index} className="language-item">
-                    <span className="language-name">{language}</span>
+                    <span className="language-name">{strength}</span>
                     <div className="language-level">
                       <div className="level-indicator fluent"></div>
                     </div>
@@ -97,19 +102,19 @@ const Education: React.FC = () => {
             </div>
 
             <div className="info-card">
-              <h3 className="card-title">Personal Information</h3>
+              <h3 className="card-title">Profile Snapshot</h3>
               <div className="personal-info">
                 <div className="info-item">
-                  <span className="info-label">Date of Birth:</span>
-                  <span className="info-value">{personalInfo.dob}</span>
+                  <span className="info-label">Current Base:</span>
+                  <span className="info-value">{personalInfo.location}</span>
                 </div>
                 <div className="info-item">
-                  <span className="info-label">Address:</span>
-                  <span className="info-value">{personalInfo.address}</span>
+                  <span className="info-label">Current Role:</span>
+                  <span className="info-value">{personalInfo.currentRole}</span>
                 </div>
                 <div className="info-item">
-                  <span className="info-label">Willing to Relocate:</span>
-                  <span className="info-value highlight">{personalInfo.relocation}</span>
+                  <span className="info-label">Certification:</span>
+                  <span className="info-value highlight">{personalInfo.certification}</span>
                 </div>
               </div>
             </div>

@@ -1,29 +1,28 @@
 import React from 'react';
-import { Code, Database, Smartphone, Brain } from 'lucide-react';
+import { Cloud, Code, Database, ShieldCheck } from 'lucide-react';
 import '../styles/About.css';
-import profileImage from '../assets/profile.jpg'; // Replace with your image path
 
 const About: React.FC = () => {
   const highlights = [
     {
       icon: <Code size={24} />,
-      title: 'Full-Stack Development',
-      description: 'Expert in React, Django, and modern web technologies'
+      title: 'Enterprise Web Development',
+      description: 'Builds scalable applications with Django, React.js, Next.js, and TypeScript.'
+    },
+    {
+      icon: <ShieldCheck size={24} />,
+      title: 'Secure Backend Systems',
+      description: 'Experienced with JWT auth, RBAC, API authorization, and production-grade service design.'
     },
     {
       icon: <Database size={24} />,
-      title: 'Blockchain Integration',
-      description: 'SUI Network, Move Language, and NFT development'
+      title: 'FinTech & Data Workflows',
+      description: 'Delivers payment processing, transaction flows, and optimized PostgreSQL/CockroachDB schemas.'
     },
     {
-      icon: <Smartphone size={24} />,
-      title: 'Mobile Development',
-      description: 'React Native applications with real-time features'
-    },
-    {
-      icon: <Brain size={24} />,
-      title: 'AI Solutions',
-      description: 'OpenAI API integrations and intelligent workflows'
+      icon: <Cloud size={24} />,
+      title: 'Cloud & Delivery',
+      description: 'Hands-on with Docker, GCP, CI/CD pipelines, monitoring, and production support.'
     }
   ];
 
@@ -36,15 +35,22 @@ const About: React.FC = () => {
 
         <div className="about-content">
           <div className="about-image">
-            <img src="/mine.png" alt="Manikrishna" className="profile-pic" />
+            <img src="/dinakar-profile.png" alt="Dinakar Y" className="profile-pic" />
           </div>
           <div className="about-text">
             <p className="about-description">
-              I'm a dynamic full-stack developer with hands-on experience in building scalable FinTech applications, blockchain integrations, and AI-powered solutions. My journey has been focused on delivering high-quality solutions using cutting-edge technologies like React, Django, and smart contract platforms.
-
-              With a proven ability to lead projects from idea to deployment, I bring a strong focus on performance, UI/UX design, and business logic. My experience at GTPL has allowed me to work on live projects and collaborate cross-functionally on innovative FinTech products.
+              I am a software engineer based in Bengaluru, Karnataka, with strong experience in
+              building secure, high-performance applications for enterprise and FinTech use cases.
+              My work spans backend architecture, REST API design, payment workflows, notification
+              systems, cloud deployment, and responsive frontend development.
             </p>
-            <button className="more-about-btn">More About</button>
+            <p className="about-description">
+              At GTPL, I contribute across the full SDLC: requirement analysis, architecture,
+              development, debugging, deployment, and production support. I enjoy working with
+              cross-functional teams to turn complex business requirements into reliable,
+              maintainable software that performs well at scale.
+            </p>
+            <a href="#experience" className="more-about-btn">More About</a>
           </div>
         </div>
 

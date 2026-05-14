@@ -6,44 +6,51 @@ const Skills: React.FC = () => {
     {
       title: 'Frontend',
       skills: [
-        { name: 'React', level: 90 },
-        { name: 'Next.js', level: 85 },
-        { name: 'React Native', level: 80 },
-        { name: 'JavaScript/TypeScript', level: 88 }
+        { name: 'Next.js', level: 90 },
+        { name: 'React.js', level: 88 },
+        { name: 'React Native', level: 82 },
+        { name: 'TypeScript', level: 84 }
       ]
     },
     {
       title: 'Backend',
       skills: [
         { name: 'Django', level: 92 },
-        { name: 'Django REST Framework', level: 90 },
-        { name: 'Node.js', level: 75 },
-        { name: 'Python', level: 88 }
+        { name: 'Django REST Framework', level: 91 },
+        { name: 'Python', level: 90 },
+        { name: 'Node.js', level: 72 }
       ]
     },
     {
-      title: 'Blockchain',
+      title: 'Database & Cloud',
       skills: [
-        { name: 'SUI Network', level: 85 },
-        { name: 'Move Language', level: 80 },
-        { name: 'NFT Minting', level: 82 },
-        { name: 'Smart Contracts', level: 78 }
-      ]
-    },
-    {
-      title: 'AI & Database',
-      skills: [
-        { name: 'OpenAI API', level: 85 },
         { name: 'PostgreSQL', level: 88 },
-        { name: 'Firebase', level: 90 },
-        { name: 'CockroachDB', level: 75 }
+        { name: 'CockroachDB', level: 82 },
+        { name: 'Firebase', level: 84 },
+        { name: 'Google Cloud Platform', level: 80 }
+      ]
+    },
+    {
+      title: 'Engineering',
+      skills: [
+        { name: 'RESTful APIs', level: 92 },
+        { name: 'JWT Authentication', level: 90 },
+        { name: 'CI/CD Pipelines', level: 78 },
+        { name: 'Agile & SDLC', level: 86 }
       ]
     }
   ];
 
   const tools = [
-    'Git', 'Docker', 'Vercel', 'GCP', 'Firebase Hosting', 
-    'CI/CD', 'Postman', 'JWT', 'RESTful APIs'
+    'Git',
+    'GitHub',
+    'Docker',
+    'Postman',
+    'Tailwind CSS',
+    'Firebase Hosting',
+    'Payment Gateway Integration',
+    'Authentication & Authorization',
+    'Real-Time Notifications'
   ];
 
   return (

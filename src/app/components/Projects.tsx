@@ -1,68 +1,68 @@
 import React from 'react';
-import { ExternalLink, Github, Smartphone, Shield, DollarSign, HandCoins } from 'lucide-react';
+import { BellRing, DollarSign, HandCoins, Smartphone } from 'lucide-react';
 import '../styles/Projects.css';
 
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: 'Regenerative Wellness Booking App',
-      description: 'A comprehensive 60-day therapy booking mobile application with intelligent session scheduling and real-time updates.',
+      title: 'Wellness Booking Application',
+      description: 'Cross-platform therapy booking application with automated scheduling, real-time sync, and an optimized mobile user experience.',
       icon: <Smartphone size={24} />,
-      technologies: ['React Native', 'Django', 'GCP', 'Real-time Database','React-js', 'Next-js'],
+      technologies: ['React Native', 'Firebase', 'TypeScript', 'API Integrations'],
       features: [
-        '60-day therapy program management',
-        'Smart session scheduling algorithm',
-        'Real-time notifications and updates',
-        'User progress tracking',
-        'Therapist dashboard'
+        'Therapy booking and appointment scheduling',
+        'Firebase real-time synchronization',
+        'Responsive cross-platform mobile UI',
+        'User-friendly booking and update flows',
+        'Optimized performance for live app usage'
       ],
-      status: 'Live on Play Store',
+      status: 'Production Experience',
       category: 'Mobile App'
     },
     {
-      title: 'Blockchain KYC Platform',
-      description: 'Secure identity verification platform leveraging SUI Blockchain technology with advanced authentication systems.',
-      icon: <Shield size={24} />,
-      technologies: ['React Native', 'Django', 'SUI Blockchain','React-js', 'Next-js', 'Move Language'],
+      title: 'Notification & Management System',
+      description: 'Scalable dashboard and notification modules with real-time updates, centralized management, and secure user access.',
+      icon: <BellRing size={24} />,
+      technologies: ['Django', 'Next.js', 'PostgreSQL', 'JWT Authentication', 'REST APIs'],
       features: [
-        'Decentralized identity verification',
-        'JWT authentication system',
-        'Fiat-to-NFT minting logic',
-        'Secure document storage',
-        'Compliance dashboard'
+        'Real-time notifications with read/unread tracking',
+        'Centralized management dashboard',
+        'Secure JWT-based authentication flows',
+        'Modular API-driven architecture',
+        'Reliable data handling with PostgreSQL'
       ],
-      status: 'Live on Play Store',
-      category: 'Blockchain'
+      status: 'Enterprise Delivery',
+      category: 'Dashboard'
     },
     {
-      title: 'Stablecoin Payment Platform',
-      description: 'High-performance platform for stablecoin transactions, optimized for speed, scalability, and low transaction costs.',
+      title: 'FinTech Payment Platform',
+      description: 'Scalable payment platform supporting secure transaction processing, authentication workflows, and reliable backend operations.',
       icon: <DollarSign size={24} />,
-      technologies: ['React', 'Django', 'Blockchain APIs','React-js', 'Next-js'],
+      technologies: ['Django', 'PostgreSQL', 'REST APIs', 'Payment Gateway Integration', 'JWT'],
       features: [
-        'Send/receive stablecoins',
-        'Multi-wallet integration',
-        'Transaction history',
-        'Low-cost processing',
-        'Advanced security protocols'
+        'Secure transaction processing workflows',
+        'Payment gateway and third-party API integration',
+        'High-performance backend API design',
+        'Transaction management and audit-friendly logic',
+        'Scalable architecture for production workloads'
       ],
       status: 'Production Ready',
       category: 'FinTech'
     },
     {
       title: 'P2P Lending Platform',
-      description: 'A peer-to-peer lending mobile application connecting borrowers and lenders with secure, transparent transactions.',
+      description: 'Peer-to-peer lending solution designed to connect borrowers and lenders through secure digital workflows.',
       icon: <HandCoins size={24} />,
-      technologies: ['React Native', 'Node.js', 'CockroachDB', 'Django','React-js', 'Next-js'],
+      technologies: ['React Native', 'Django', 'CockroachDB', 'Node.js', 'REST APIs'],
       features: [
-        'Direct borrower-lender matching',
-        'Automated credit scoring',
-        'Secure loan agreements via smart contracts',
-        'Real-time payment tracking',
-        'Dispute resolution system'
+        'Borrower and lender onboarding flows',
+        'Secure application and approval workflows',
+        'Database support for transactional records',
+        'Structured APIs for lending operations',
+        'Mobile-first product experience'
       ],
-      status: 'In Development',
-      category: 'FinTech'
+      status: 'Product Experience',
+      category: 'Lending'
     }
   ];
 
@@ -72,7 +72,7 @@ const Projects: React.FC = () => {
         <div className="section-header">
           <h2 className="section-title">Featured Projects</h2>
           <p className="section-subtitle">
-            Innovative solutions spanning mobile apps, blockchain, and FinTech
+            Solutions delivered across FinTech, operations, and mobile product experiences
           </p>
         </div>
 

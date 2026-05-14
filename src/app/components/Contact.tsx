@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Linkedin, Github } from 'lucide-react';
-import emailjs from '@emailjs/browser';
+import { Linkedin, Mail, MapPin, Phone, Send } from 'lucide-react';
 import '../styles/Contact.css';
 
 const Contact: React.FC = () => {
@@ -11,7 +10,7 @@ const Contact: React.FC = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success'>('idle');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -20,60 +19,39 @@ const Contact: React.FC = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
-      // EmailJS configuration
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-        to_email: 'maniamarthi@gmail.com'
-      };
+    const subject = encodeURIComponent(formData.subject);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    );
 
-      // Replace with your EmailJS credentials
-      const serviceId = 'service_ua75qhi';
-      const templateId = 'template_gkuczmq';
-      const publicKey = '1u0kFsxB_HqqxxKVO';
-
-      // Send email using EmailJS
-      const response = await emailjs.send(serviceId, templateId, templateParams, publicKey);
-
-      if (response.status === 200) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        setTimeout(() => setSubmitStatus('idle'), 3000);
-      } else {
-        setSubmitStatus('error');
-      }
-    } catch (error) {
-      console.error('Email sending failed:', error);
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
+    window.location.href = `mailto:dinakaryaramati95355@gmail.com?subject=${subject}&body=${body}`;
+    setSubmitStatus('success');
+    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSubmitting(false);
+    setTimeout(() => setSubmitStatus('idle'), 3000);
   };
 
   const contactInfo = [
     {
       icon: <Mail size={20} />,
       label: 'Email',
-      value: 'maniamarthi@gmail.com',
-      href: 'mailto:maniamarthi@gmail.com'
+      value: 'dinakaryaramati95355@gmail.com',
+      href: 'mailto:dinakaryaramati95355@gmail.com'
     },
     {
       icon: <Phone size={20} />,
       label: 'Phone',
-      value: '+91 9502728137',
-      href: 'tel:+919502728137'
+      value: '+91 95355 55301',
+      href: 'tel:+919535555301'
     },
     {
       icon: <MapPin size={20} />,
       label: 'Location',
-      value: 'East Godavari, Andhra Pradesh',
+      value: 'Bengaluru, Karnataka',
       href: null
     }
   ];
@@ -82,20 +60,20 @@ const Contact: React.FC = () => {
     {
       icon: <Linkedin size={24} />,
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/manikrishna-amarthi-001427217/',
+      href: 'https://www.linkedin.com/in/dinakar-y-31a527217/',
       color: '#0077B5'
-    },
-    {
-      icon: <Github size={24} />,
-      label: 'GitHub',
-      href: 'https://github.com/manikrishnaamarthi',
-      color: '#333'
     },
     {
       icon: <Mail size={24} />,
       label: 'Email',
-      href: 'mailto:maniamarthi@gmail.com',
+      href: 'mailto:dinakaryaramati95355@gmail.com',
       color: '#EA4335'
+    },
+    {
+      icon: <Phone size={24} />,
+      label: 'Phone',
+      href: 'tel:+919535555301',
+      color: '#0F9D58'
     }
   ];
 
@@ -105,7 +83,7 @@ const Contact: React.FC = () => {
         <div className="section-header">
           <h2 className="section-title">Get In Touch</h2>
           <p className="section-subtitle">
-            Let's discuss your next project or collaboration opportunity
+            Open to discussing software engineering roles, product builds, and collaboration opportunities
           </p>
         </div>
 
@@ -114,8 +92,9 @@ const Contact: React.FC = () => {
             <div className="contact-intro">
               <h3 className="intro-title">Let's Connect</h3>
               <p className="intro-text">
-                I'm always open to discussing new opportunities, innovative projects, 
-                or collaborations in FinTech, Blockchain, and AI development.
+                I enjoy building secure, user-focused software for enterprise and FinTech use
+                cases. If you have a role, product idea, or engineering problem to discuss, feel
+                free to reach out.
               </p>
             </div>
 
@@ -225,11 +204,11 @@ const Contact: React.FC = () => {
                 {isSubmitting ? (
                   <>
                     <div className="loading-spinner"></div>
-                    Sending...
+                    Preparing...
                   </>
                 ) : submitStatus === 'success' ? (
                   <>
-                    ✓ Message Sent!
+                    Message Ready
                   </>
                 ) : (
                   <>
@@ -241,12 +220,7 @@ const Contact: React.FC = () => {
 
               {submitStatus === 'success' && (
                 <p className="success-message">
-                  Thank you for your message! I'll get back to you soon.
-                </p>
-              )}
-              {submitStatus === 'error' && (
-                <p className="error-message">
-                  Failed to send message. Please try again later.
+                  Your email app should open with the message pre-filled for Dinakar.
                 </p>
               )}
             </form>

@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
-import { Download, Github, Linkedin, Mail } from 'lucide-react';
+import React from 'react';
+import { Download, Linkedin, Mail, Phone } from 'lucide-react';
 import '../styles/Hero.css';
 
 const Hero = () => {
-  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-
   const scrollToContact = () => {
     const element = document.querySelector('#contact');
     if (element) {
@@ -12,12 +10,17 @@ const Hero = () => {
     }
   };
 
-  const toggleMobileNav = () => {
-    setIsMobileNavOpen(!isMobileNavOpen);
-  };
-
   return (
-    <header className="header" style={{ backgroundImage: `url(/mine1.png)`, backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative' }}>
+    <header
+      className="header"
+      style={{
+        backgroundImage:
+          'linear-gradient(90deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.82) 48%, rgba(0, 0, 0, 0.4) 100%), url(/dinakar-profile.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'right center',
+        position: 'relative'
+      }}
+    >
       <div className="section__container header__container">
         <div className="hero-background">
           <div className="gradient-orb orb-1"></div>
@@ -27,20 +30,21 @@ const Hero = () => {
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
           <div>
             <p>Hello I'm</p>
-            <h1>Manikrishna</h1>
+            <h1>Dinakar Y</h1>
             <h2 className="section__title">Full-Stack <span>Developer</span></h2>
             <p className="hero-description">
-              Welcome to my developer portfolio! I'm Manikrishna, a skilled and creative
-              full-stack developer and team leader with a passion for building scalable FinTech
-              applications, blockchain integrations, and AI-powered solutions.
+              Results-driven software engineer with 3+ years of experience building scalable
+              enterprise and FinTech applications using Python, Django, React.js, Next.js, and
+              RESTful APIs. I focus on secure backend systems, resilient architecture, and polished
+              user experiences across web and mobile products.
             </p>
             <div className="action__btns">
               <button onClick={scrollToContact} className="btn">
                 Say Hello
               </button>
               <a
-                href="/Amarthi_Manikrishna_Final_Resume_compressed.pdf"
-                download="Amarthi_Manikrishna_Resume.pdf"
+                href="/Dinakar_Y_Resume.pdf"
+                download="Dinakar_Y_Resume.pdf"
                 className="btn video"
               >
                 <span>Download Resume</span>
@@ -48,14 +52,20 @@ const Hero = () => {
               </a>
             </div>
             <div className="social__icons">
-              <a href="https://www.linkedin.com/in/manikrishna-amarthi-001427217/" className="icon" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/in/dinakar-y-31a527217/"
+                className="icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
                 <Linkedin size={24} />
               </a>
-              <a href="https://github.com/manikrishnaamarthi" className="icon" target="_blank" rel="noopener noreferrer">
-                <Github size={24} />
-              </a>
-              <a href="mailto:maniamarthi@gmail.com" className="icon" target="_blank" rel="noopener noreferrer">
+              <a href="mailto:dinakaryaramati95355@gmail.com" className="icon" aria-label="Email">
                 <Mail size={24} />
+              </a>
+              <a href="tel:+919535555301" className="icon" aria-label="Phone">
+                <Phone size={24} />
               </a>
             </div>
           </div>

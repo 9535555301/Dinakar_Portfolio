@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import '../styles/Header.css';
 
@@ -10,6 +10,7 @@ const Header: React.FC = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -32,12 +33,12 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="header-container">
+    <header className={`site-header ${isScrolled ? 'scrolled' : ''}`}>
+      <div className="site-header__container">
         <div className="logo">
-          <span>Amarthi Manikrishna</span>
+          <span>Dinakar Y</span>
         </div>
-        
+
         <nav className="desktop-nav">
           {navItems.map((item) => (
             <button
@@ -53,6 +54,7 @@ const Header: React.FC = () => {
         <button
           className="mobile-menu-toggle"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle navigation menu"
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
