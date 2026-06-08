@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import "./index.css";
 
 export const metadata: Metadata = {
-  title: "Dinakar Y | Full-Stack Developer",
+  title: "Dinakar Y | Software Engineer",
   description:
-    "Portfolio of Dinakar Y, a software engineer building scalable enterprise, FinTech, and mobile applications with Django, React, Next.js, and cloud platforms.",
+    "Recruiter-friendly portfolio of Dinakar Y, a full-stack software engineer open to new roles and experienced in Django, React, Next.js, APIs, and mobile-first product delivery.",
 };
 
 export default function RootLayout({
